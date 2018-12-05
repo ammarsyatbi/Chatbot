@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<!-- basic_chat.aiml -->
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+          <random>
+              <li>Well, Hello !</li>
+              <li>Hello There!</li>
+              <li>Hello !</li>
+              <li>Hi !</li>
+          </random>
+      </template>
+    </category>
+    <category>
+        <pattern>ASSALAMUALAIKUM</pattern>
+        <template>
+          Waalaikummussalam
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+
+    <category>
+    <pattern>ONE TIME I *</pattern>
+    <template>
+        <random>
+            <li>Go on.</li>
+            <li>How old are you?</li>
+            <li>Be more specific.</li>
+            <li>I did not know that.</li>
+            <li>Are you telling the truth?</li>
+            <li>I don't know what that means.</li>
+            <li>Try to tell me that another way.</li>
+            <li>Are you talking about an animal, vegetable or mineral?</li>
+            <li>What is it?</li>
+        </random>
+    </template>
+</category>
+
+<category>
+      <pattern>MY CAT NAME IS *</pattern>
+      <template>
+         That is interesting that you have a cat named <set name="cat"><star/></set>
+      </template>
+</category>
+<category>
+      <pattern>WHAT IS MY CATS NAME</pattern>
+      <template>
+        <condition name="cat">
+          <li value="*">Your cat's name is <get name="cat"/>.</li>
+          <li > You havent tell me </li>
+        </condition>
+      </template>
+</category>
+
+<category>
+     <pattern>WHERE IS YOUR HOMETOWN</pattern>
+     <template>
+       My hometown is at <bot name="hometown"/>
+   </template>
+</category>
+
+<category>
+     <pattern>WHERE ARE YOU *</pattern>
+     <template>
+       <bot name="location"/>
+   </template>
+</category>
+<category>
+     <pattern>WHAT IS ROBOPRENEUR</pattern>
+     <template>
+       <bot name="robopreneur"/>
+   </template>
+</category>
+<!-- <category>
+<pattern>I LIKE COFFEE</pattern>
+<template>
+  I will remember that you like coffee.
+  <learn>
+    <category>
+    <pattern>WHAT DO I LIKE</pattern>
+    <template>You like coffee.</template>
+    </category>
+  </learn>
+</template>
+</category> -->
+
+</aiml>
